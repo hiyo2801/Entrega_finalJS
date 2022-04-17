@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto Tatuaje</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/cd33816f91.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="container" class="cont">
+        <div class="row" id="row">
+            <h1 id="titulo">Presupuesto</h1>
+            <!-- Formulario largo Ancho -->
+            <!-- ////////////////////// -->
+            <form action="" method="post" id="frmsuma" class="formulario">
+                <label for="numero1">Ingresa el largo en cm:</label>
+                <div class="formulario__grupo" id="grupo__cmLargo">
+                    <div class="formulario__grupo-input">
+                        <input type="number" id="cmLargo" name="cmLargo" class="formulario__cm" placeholder="Ingresa el largo en cm:">
+                    </div>
+                </div>
+                <label for="numero2">Ingresa el ancho en cm:</label>
+                <div class="formulario__grupo" id="grupo__cmAncho">
+                    <div class="formulario__grupo-input">
+                        <input type="number" id="cmAncho" name="cmAncho" class="formulario__cm" placeholder="Ingresa el ancho en cm:">
+                    </div>
+                </div>
+            </form>
+            <div class="botones">
+                <div class="zona">
+                    <h2>Seleciona la zona que deseas tatuar</h2>
+                    <button id="cabeza" type="button" class="col-sm-12 col-md-4 col-lg-1"></button>
+                    <button id="brazos" type="button" class="col-sm-12 col-md-4 col-lg-1"></button>
+                    <button id="pecho" type="button" class="col-sm-12 col-md-4 col-lg-1"></button>
+                    <button id="espalda" type="button" class="col-sm-12 col-md-4 col-lg-1"></button>
+                    <button id="piernas" type="button" class="col-sm-12 col-md-4 col-lg-1"></button>
+                    <button id="pies" type="button" class="col-sm-12 col-md-4 col-lg-1"></button>
+                    <button id="manos" type="button" class="col-sm-12 col-md-4 col-lg-1"></button>
+                    <tr>
+                    <td colspan="4"><span id="zonatext"></span></td>
+                    </tr>
+                </div>
+                <div id="tipo">
+                    <h2>Seleciona el tipo de tatuaje (Linea/Negro/Color)</h2><br>
+                    <button id="linea" type="button" class="col-sm-12 col-md-4 col-lg-1"> <img src="/img/Linea.png" /></button>
+                    <button id="negro" type="button" class="col-sm-12 col-md-4 col-lg-1"> <img src="/img/grises.jpg"/></button>
+                    <button id="color" type="button" class="col-sm-12 col-md-4 col-lg-1"> <img src="/img/color.png" /></button>
+                    <br><br>
+                    <tr>
+                    <td colspan="4"><span id="tipoText"></span></td>
+                    </tr>
+                </div>
+                <button id="calcular" type="button" height ="84" width="89">calcular</button>
+                <button id="reiniciar" type="button" height ="84" width="89">Nuevo usuario</button>
+            </div>
+            <div id="resultado"></div>
+        </div>
+    </div>
+    <div class="pop-up">
+        <h3 id="result"></h3>
+        <div class="pop-up-wrap">
+            <div class="pop-up-title">
+                <p id="mensajes"></p>
+            </div>
+            <div class="subcription">
+                <div class="sub-content">
+                    <h2>Bienvenido</h2>
+                    <p>Ingresa tus datos para continuar</p>
+                    <form id="formulario" class="formulario">
+                        <!-- Validación de letras Nombre -->
+                        <div class="formulario__grupo" id="grupo__nombre">
+                            <div class="formulario__grupo-input">
+                            <input type="text" id="nombre" class="formulario__input" name="nombre" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <!-- Validación de letras Apellido -->
+                        <div class="formulario__grupo" id="grupo__apellido">
+                            <div class="formulario__grupo-input">
+                            <input type="text" id="apellido" class="formulario__input" name="apellido" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <!-- Validación de Numeros -->
+                        <div class="formulario__grupo" id="grupo__numeros">
+                            <div class="formulario__grupo-input">
+                            <input type="number" id="edad" class="formulario__input" name="numeros" placeholder="Edad">
+                            </div>
+                        </div>
+                        <!-- Validación de correo -->
+                        <div class="formulario__grupo" id="grupo__correo">
+                            <div class="formulario__grupo-input">
+                            <input type="email" id="mail" class="formulario__input" name="correo" placeholder="Esccribe tu correo electronico">
+                            </div>
+                        </div>
+                        <input class= "reset" type="reset" value="Reestablecer">
+                        <button id="send" class="subs-send" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jsonapi.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/local.js"></script>
+    <script src="js/validaciones.js"></script>
+</body>
+</html>
